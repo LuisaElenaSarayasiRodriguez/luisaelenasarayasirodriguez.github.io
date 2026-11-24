@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Luisa Elena Sarayasi Rodríguez | Administración de Negocios, UCSP</title>
+<meta name="description" content="Página personal de Luisa Elena Sarayasi Rodríguez, estudiante de Administración de Negocios con mención en Marketing en la Universidad Católica San Pablo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --fondo:#150b26;
+  --fondo-2:#1f1236;
+  --panel:#291849;
+  --morado:#7b5bb8;
+  --plata:#c8cbd6;
+  --plata-claro:#eceef4;
+  --plata-oscuro:#8f93a3;
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Jost","Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px;color-scheme:dark}
+body{background:var(--fondo);color:var(--plata);font-family:var(--sans);font-weight:300;font-size:1.05rem;line-height:1.75}
+a{color:var(--plata-claro);text-decoration-color:var(--plata-oscuro);text-underline-offset:4px;transition:color .2s,text-decoration-color .2s}
+a:hover{color:#fff;text-decoration-color:var(--plata-claro)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--plata-claro);outline-offset:3px;border-radius:2px}
+
+/* Navegación */
+header{position:sticky;top:0;z-index:10;background:rgba(21,11,38,.94);backdrop-filter:blur(8px);border-bottom:1px solid rgba(200,203,214,.25)}
+nav{max-width:980px;margin:0 auto;padding:.85rem 1.5rem;display:flex;gap:1.4rem;flex-wrap:wrap;align-items:center}
+nav .marca{font-family:var(--serif);font-weight:600;font-size:1.25rem;color:var(--plata-claro);text-decoration:none;margin-right:auto}
+nav a:not(.marca){font-size:.92rem;text-decoration:none;color:var(--plata)}
+nav a:not(.marca):hover{color:#fff;text-decoration:underline;text-decoration-color:var(--plata-oscuro)}
+
+/* Portada */
+.portada{background:linear-gradient(160deg,var(--panel) 0%,var(--fondo-2) 55%,var(--fondo) 100%);border-bottom:1px solid rgba(200,203,214,.25)}
+.portada-in{max-width:980px;margin:0 auto;padding:7rem 1.5rem 6rem}
+.portada h1{font-family:var(--serif);font-weight:700;font-size:clamp(2.8rem,8vw,5.6rem);line-height:1.02;letter-spacing:-.01em;color:transparent;background:linear-gradient(100deg,#9fa3b3 0%,#f4f5fa 45%,#aeb2c1 100%);-webkit-background-clip:text;background-clip:text}
+.portada .rol{font-family:var(--serif);font-size:clamp(1.3rem,3vw,1.8rem);color:var(--plata-claro);margin-top:1.4rem;font-weight:500}
+.portada .sub{margin-top:.6rem;max-width:34rem;color:var(--plata)}
+.portada .acciones{margin-top:2.2rem;display:flex;gap:.9rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.7rem 1.5rem;border:1px solid var(--plata);color:var(--plata-claro);text-decoration:none;font-weight:400;font-size:.95rem;border-radius:2px;transition:background .2s,color .2s}
+.btn:hover{background:var(--plata-claro);color:var(--fondo)}
+.btn.lleno{background:var(--plata-claro);color:var(--fondo)}
+.btn.lleno:hover{background:transparent;color:var(--plata-claro)}
+.linea-plata{height:3px;width:5rem;background:linear-gradient(90deg,#fff,var(--plata-oscuro));margin-bottom:1.6rem;transform-origin:left;animation:trazo 1s .1s ease-out both}
+.portada h1,.portada .rol,.portada .sub,.portada .acciones{animation:entra .9s ease-out both}
+.portada .rol{animation-delay:.25s}.portada .sub{animation-delay:.4s}.portada .acciones{animation-delay:.55s}
+@keyframes entra{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes trazo{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+/* Secciones */
+main{max-width:980px;margin:0 auto;padding:0 1.5rem}
+section{padding:4.2rem 0;border-bottom:1px solid rgba(200,203,214,.18)}
+section:last-of-type{border-bottom:none}
+h2{font-family:var(--serif);font-weight:600;font-size:clamp(1.9rem,4vw,2.5rem);color:var(--plata-claro);line-height:1.15;margin-bottom:1.6rem;display:flex;align-items:center;gap:1rem}
+h2::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--plata-oscuro),transparent)}
+h3{font-family:var(--serif);font-weight:600;font-size:1.4rem;color:var(--plata-claro);line-height:1.25;margin-bottom:.2rem}
+p{max-width:44rem}
+p+p{margin-top:1rem}
+.fecha{color:var(--plata-oscuro);font-size:.95rem;margin-bottom:.5rem}
+
+.bloque{padding:1.3rem 0 1.3rem 1.4rem;border-left:2px solid var(--morado)}
+.bloque+.bloque{margin-top:1.2rem}
+
+.dos{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2.4rem}
+ul.simple{list-style:none}
+ul.simple li{padding:.55rem 0;border-bottom:1px solid rgba(200,203,214,.15)}
+ul.simple li:last-child{border-bottom:none}
+ul.simple small{color:var(--plata-oscuro);font-size:.92rem}
+
+.chips{display:flex;flex-wrap:wrap;gap:.6rem}
+.chips span{padding:.35rem .95rem;border:1px solid rgba(200,203,214,.4);border-radius:999px;font-size:.95rem;color:var(--plata-claro)}
+
+.curso{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:.9rem 0;border-bottom:1px solid rgba(200,203,214,.15)}
+.curso:last-child{border-bottom:none}
+.curso .nombre{font-family:var(--serif);font-weight:500;font-size:1.3rem;color:var(--plata-claro)}
+.curso .docente{color:var(--plata-oscuro);font-size:.95rem;text-align:right}
+.curso .docente a{color:var(--plata-claro)}
+
+.enlaces{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:.7rem 1.5rem;list-style:none}
+.enlaces li{border-bottom:1px solid rgba(200,203,214,.15);padding:.45rem 0}
+
+footer{border-top:1px solid rgba(200,203,214,.25);padding:2.2rem 1.5rem;text-align:center;color:var(--plata-oscuro);font-size:.92rem}
+
+@media (max-width:600px){
+  nav{gap:.9rem}
+  .portada-in{padding:4.5rem 1.5rem 4rem}
+  section{padding:3.2rem 0}
+  .curso .docente{text-align:left}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .portada h1,.portada .rol,.portada .sub,.portada .acciones,.linea-plata{animation:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav aria-label="Principal">
+    <a class="marca" href="#inicio">Luisa Sarayasi</a>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#formacion">Formación</a>
+    <a href="#experiencia">Experiencia</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#cursos">Cursos</a>
+    <a href="#metas">Metas</a>
+    <a href="#companeros">Compañeros</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<div class="portada" id="inicio">
+  <div class="portada-in">
+    <div class="linea-plata"></div>
+    <h1>Luisa Elena<br>Sarayasi Rodríguez</h1>
+    <p class="rol">Estudiante de Administración de Negocios</p>
+    <p class="sub">Mención en Marketing, Universidad Católica San Pablo, Arequipa, Perú.</p>
+    <div class="acciones">
+      <a class="btn lleno" href="#contacto">Contáctame</a>
+      <a class="btn" href="https://ucsp.edu.pe" target="_blank" rel="noopener">Universidad Católica San Pablo</a>
+      <a class="btn" href="https://ucsp.edu.pe/carreras/administracion-negocios/?tab=institucional" target="_blank" rel="noopener">Mi carrera</a>
+    </div>
+  </div>
+</div>
+
+<main>
+
+<section id="sobre-mi">
+  <h2>Sobre mí</h2>
+  <p>Soy estudiante de Administración de Negocios en la Universidad Católica San Pablo, con mención en Marketing. Mi formación combina la gestión empresarial con el análisis del comportamiento del consumidor, una base que me permite comprender cómo se construyen y se posicionan las marcas.</p>
+  <p>Mi motivación principal para estudiar esta carrera es fundar y dirigir mi propia empresa, específicamente un spa. Por eso me preparo en los fundamentos de la administración y en las herramientas de marketing necesarias para liderar un negocio orientado al bienestar y a la experiencia del cliente.</p>
+  <p>Me caracterizo por la disciplina, el orden y la disposición para aprender. Valoro el trabajo bien hecho y busco crecer tanto en lo académico como en lo profesional.</p>
+</section>
+
+<section id="formacion">
+  <h2>Formación</h2>
+  <div class="bloque">
+    <h3>Universidad Católica San Pablo (UCSP)</h3>
+    <p class="fecha">2024 – actualidad</p>
+    <p>Administración de Negocios con mención en Marketing. <a href="https://ucsp.edu.pe" target="_blank" rel="noopener">Sitio de la universidad</a> · <a href="https://ucsp.edu.pe/carreras/administracion-negocios/?tab=institucional" target="_blank" rel="noopener">Información de la carrera</a></p>
+  </div>
+  <div class="bloque">
+    <h3>Colegio Nuestra Señora del Pilar</h3>
+    <p class="fecha">2011 – 2023</p>
+    <p>Realicé toda mi educación escolar en esta institución y cursé el Bachillerato Internacional. <a href="https://cnspilar.edu.pe" target="_blank" rel="noopener">Sitio del colegio</a></p>
+  </div>
+  <div class="bloque">
+    <h3>Idiomas</h3>
+    <ul class="simple">
+      <li>Español <small>nativo</small></li>
+      <li>Portugués <small>nivel B2</small></li>
+      <li>Inglés <small>nivel B1</small></li>
+    </ul>
+  </div>
+</section>
+
+<section id="experiencia">
+  <h2>Experiencia y logros</h2>
+  <div class="bloque">
+    <h3>Staff comercial del CARA</h3>
+    <p class="fecha">2026</p>
+    <p>Participé en el staff del área comercial del Congreso Anual sobre la Región Arequipa, una experiencia que fortaleció mi comunicación, mi trabajo en equipo y mi capacidad de coordinación en un evento de gran escala. <a href="https://cara.org.pe" target="_blank" rel="noopener">Conoce el CARA</a></p>
+  </div>
+  <div class="bloque">
+    <h3>Bachillerato Internacional</h3>
+    <p>Cursé el Bachillerato Internacional, un programa académico exigente que desarrolló mi pensamiento crítico y mi disciplina de estudio.</p>
+  </div>
+</section>
+
+<section id="habilidades">
+  <h2>Habilidades</h2>
+  <div class="dos">
+    <div>
+      <h3>Habilidades blandas</h3>
+      <div class="chips" style="margin-top:.9rem">
+        <span>Organización</span><span>Responsabilidad</span><span>Trabajo en equipo</span><span>Comunicación</span><span>Puntualidad</span><span>Adaptabilidad</span>
+      </div>
+    </div>
+    <div>
+      <h3>Habilidades técnicas</h3>
+      <div class="chips" style="margin-top:.9rem">
+        <span>Excel</span><span>Word</span><span>PowerPoint</span><span>Canva</span><span>Google Drive</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cursos">
+  <h2>Cursos actuales</h2>
+  <div class="curso"><span class="nombre">Estadística para Administradores</span></div>
+  <div class="curso"><span class="nombre">Cálculo en una Variable</span></div>
+  <div class="curso">
+    <span class="nombre">Introducción a la Computación</span>
+    <span class="docente">Docente del curso: <a href="https://www.linkedin.com/in/ecuadrosv" target="_blank" rel="noopener">Ernesto Cuadros-Vargas</a></span>
+  </div>
+  <div class="curso"><span class="nombre">Análisis de la Realidad Peruana</span></div>
+  <div class="curso"><span class="nombre">Metafísica</span></div>
+  <div class="curso"><span class="nombre">Fe y Razón</span></div>
+</section>
+
+<section id="metas">
+  <h2>Metas a futuro</h2>
+  <div class="bloque">
+    <h3>Fundar y dirigir mi propio spa</h3>
+    <p>Mi proyección profesional es crear y gestionar una empresa propia dedicada al bienestar. Quiero combinar la administración, el marketing y un servicio de calidad para ofrecer una experiencia memorable a mis clientes.</p>
+  </div>
+</section>
+
+<section id="companeros">
+  <h2>Mis compañeros</h2>
+  <p style="margin-bottom:1.4rem">Estas son las páginas personales de algunos de mis compañeros de la UCSP.</p>
+  <ul class="enlaces">
+    <li><a href="https://nataliaortizdiezcanseco.github.io" target="_blank" rel="noopener">Natalia Ortiz</a></li>
+    <li><a href="https://macarenaenriquez-oss.github.io/maca.github.io/" target="_blank" rel="noopener">Macarena Enriquez</a></li>
+    <li><a href="https://eduardosebastianfloressoto.github.io" target="_blank" rel="noopener">Eduardo Flores</a></li>
+    <li><a href="https://luciananicolecardenaslopez.github.io" target="_blank" rel="noopener">Luciana Cárdenas</a></li>
+    <li><a href="https://mattiasgaldosibarcena.github.io" target="_blank" rel="noopener">Mattias Galdos</a></li>
+    <li><a href="https://rafaelchirinosaspauza.github.io/sitio-web-sobre-mi-/" target="_blank" rel="noopener">Rafael Chirinos</a></li>
+    <li><a href="https://renzo-arenas.github.io/RenzoArenas.github.io/" target="_blank" rel="noopener">Renzo Arenas</a></li>
+    <li><a href="https://abelgamboa.github.io/abelvalentinogamboaespejo.github.io/" target="_blank" rel="noopener">Abel Gamboa</a></li>
+  </ul>
+</section>
+
+<section id="contacto">
+  <h2>Contacto y redes</h2>
+  <div class="dos">
+    <div>
+      <h3>Correos</h3>
+      <ul class="simple" style="margin-top:.6rem">
+        <li><small>Personal</small><br><a href="mailto:luisasarayasi220@gmail.com">luisasarayasi220@gmail.com</a></li>
+        <li><small>Institucional</small><br><a href="mailto:luisa.sarayasi@ucsp.edu.pe">luisa.sarayasi@ucsp.edu.pe</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Redes sociales</h3>
+      <ul class="simple" style="margin-top:.6rem">
+        <li><a href="https://www.instagram.com/lu_sarayasi?jplx=eHhhYWV2cXBudDA%3D&utm_source=qr" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.linkedin.com/in/luisa-elena-sarayasi-rodriguez-573573451" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>© 2026 Luisa Elena Sarayasi Rodríguez. Arequipa, Perú.</footer>
+
+</body>
+</html>
